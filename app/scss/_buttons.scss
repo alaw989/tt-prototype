@@ -1,0 +1,44 @@
+.tt-btn {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 15px 30px;
+  outline: none !important;
+
+  @media (min-width: 768px) {
+    padding: 15px 40px;
+  }
+
+  transition: all 0.2s ease-in;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+
+    &:before {
+      animation: shine 0.5s 0s linear;
+    }
+  }
+
+  &:active {
+    transition: box-shadow 0.2s ease-in;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    transform: skewX(-20deg);
+  }
+}

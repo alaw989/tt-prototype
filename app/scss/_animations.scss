@@ -1,0 +1,165 @@
+// Keyframes
+@include keyframes-compatible(shine) {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+@include keyframes-compatible(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes-compatible(mobileScrollAction) {
+  0% {
+    opacity: 0;
+    top: 65%;
+  }
+  25% {
+    opacity: 1;
+    top: 65%;
+  }
+  75% {
+    opacity: 1;
+    top: 17.5%;
+  }
+  100% {
+    opacity: 0;
+    top: 17.5%;
+  }
+}
+
+@include keyframes-compatible(desktopScrollAction) {
+  0% {
+    opacity: 0;
+    top: 17.5%;
+  }
+  25% {
+    opacity: 1;
+    top: 17.5%;
+  }
+  75% {
+    opacity: 1;
+    top: 65%;
+  }
+  100% {
+    opacity: 0;
+    top: 65%;
+  }
+}
+
+@include keyframes-compatible(slideUp) {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@include keyframes-compatible(rotate) {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes-compatible(show-title-main) {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes-compatible(draw) {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@include keyframes-compatible(show-title-sub) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scroll .indicator {
+  animation: mobileScrollAction 2s ease-in-out infinite;
+
+  @media (min-width: 992px) {
+    animation: desktopScrollAction 2s ease-in-out infinite;
+  }
+}
+
+.sw-title {
+  -webkit-animation: fadeIn 2s forwards;
+  animation: fadeIn 2s forwards;
+}
+
+.last-slide {
+  .tt-logo__sun {
+    -webkit-animation: rotate 2s 2;
+    animation: rotate 2s 2;
+  }
+
+  .tt-logo__title--sub {
+    -webkit-animation: show-title-sub 1s 5.9s forwards;
+    animation: show-title-sub 1s 5.9s forwards;
+  }
+
+  .tt-logo__border--left {
+    -webkit-animation: draw 4s ease-in-out 4s forwards;
+    animation: draw 4s ease-in-out 4s forwards;
+  }
+
+  .tt-logo__border--right {
+    -webkit-animation: draw 3.5s ease-in-out 4s forwards;
+    animation: draw 3.5s ease-in-out 4s forwards;
+  }
+
+  .tt-logo__title--main {
+    -webkit-animation: show-title-main 4s forwards;
+    animation: show-title-main 4s forwards;
+  }
+
+  $delay: 7.1s;
+
+  @for $i from 1 to 4 {
+    .social li:nth-child(#{$i}) {
+      -webkit-animation: fadeIn 2s $delay forwards;
+      animation: fadeIn 2s $delay forwards;
+    }
+
+    $delay: $delay + 0.7;
+  }
+
+  .orbit {
+    -webkit-animation: slideUp 15s ease;
+    animation: slideUp 15s ease;
+  }
+}

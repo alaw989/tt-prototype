@@ -1,0 +1,84 @@
+// Colors
+$sw-blue: #0db8fe;
+$sw-blue-dark: darken($sw-blue, 50%);
+$sw-blue-darker: darken($sw-blue-dark, 50%);
+$sw-blue-transp: transparentize($sw-blue, 0.8);
+
+.slider-cont {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+}
+
+.social-icon {
+  color: white;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  color: white;
+  text-shadow: 0 0 30px transparentize($sw-blue, 0.5);
+}
+
+.second-slide .slider-cont:after {
+  color: rgba(83, 83, 83, 0.2);
+}
+
+.card-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overflow-container {
+  &:before {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.card-head {
+  color: $sw-blue;
+}
+
+html, body {
+  background-color: black;
+  color: white;
+}
+
+.scroll {
+  border: 3px solid $sw-blue-transp;
+}
+
+.scroll .indicator {
+  border: 4px solid $sw-blue-transp;
+}
+
+.sw-title {
+  color: $sw-blue;
+}
+
+.tt-btn {
+  color: white;
+  border: 1px solid $sw-blue;
+  box-shadow: 0 0 0 0 transparent;
+
+  &:hover, &:focus {
+    color: white;
+    box-shadow: 0 0 30px 0 transparentize($sw-blue, 0.5);
+    background-color: $sw-blue;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  &:before {
+    background-color: white;
+    box-shadow: 0 0 15px 3px white;
+  }
+}
+
+.underline:before {
+  border-bottom: solid 1px $sw-blue;
+}
+
+.underline:after {
+  border-bottom: dotted 4px $sw-blue;
+}

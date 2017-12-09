@@ -1,0 +1,474 @@
+// Base Styles
+html,
+body {
+  position: relative;
+}
+
+.vertical-align {
+  height: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-align: center;
+  -moz-flex-align: center;
+  -ms-flex-align: center;
+  flex-align: center;
+}
+
+.tt-slider {
+  width: 100vw;
+  height: 100vh;
+}
+
+.slick-slide {
+  outline: none !important;
+}
+
+.slider-cont {
+  height: 100vh;
+}
+
+.inner-content {
+  padding-left: 65px;
+  padding-right: 30px;
+
+  @media (min-width: 768px) {
+    padding-left: 90px;
+    padding-right: 40px;
+  }
+}
+
+.tt-slider .second-slide {
+  background-image: url("../../img/tantive-iv-interior.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tt-slider .lb-images {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tt-slider .lb-images .lb-slides {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tt-slider .lb-images .lb-slides .img-fill {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.tt-slider .lb-images .lb-slides .second-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.scroll {
+  height: 50px;
+  width: 30px;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  display: none;
+}
+
+.scroll .indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0;
+  top: 65%;
+  border-radius: 15px;
+}
+
+.scroll .indicator:last-child {
+  visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .scroll {
+    border-radius: 7px;
+    width: 60px;
+  }
+
+  .scroll .indicator {
+    top: 17.5%;
+  }
+
+  .scroll .indicator:first-child {
+    left: 37%;
+    transform: translateX(-37%);
+  }
+
+  .scroll .indicator:last-child {
+    visibility: visible;
+    left: 63%;
+    transform: translateX(-63%);
+  }
+}
+
+.svg-cont {
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+  width: 100%;
+}
+
+/* Splash Logo */
+.tt-logo {
+  width: 100%;
+  padding-top: 50px;
+}
+
+/* Twin Suns */
+.tt-logo__sun {
+  -webkit-transform-origin: 310.92px 47.84px;
+  transform-origin: 310.92px 47.84px;
+}
+
+.tt-logo__sun--first {
+  fill: #f77529;
+}
+
+.tt-logo__sun--second {
+  fill: #edccca;
+}
+
+/* Border */
+.tt-logo__border {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 4.3px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.tt-logo__border--left {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.tt-logo__border--right {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+/* Titles */
+.tt-logo__title--main, .tt-logo__title--sub {
+  fill: #fff;
+}
+
+.tt-logo__title--main {
+  fill: #fff;
+}
+
+.tt-logo__title--sub {
+  fill: #fff;
+  opacity: 0;
+}
+
+.sw-title-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.sw-title {
+  opacity: 0;
+  display: initial;
+}
+
+.last-slide {
+  .orbit, .svg-cont {
+    opacity: 1;
+  }
+}
+
+.orbit {
+  position: absolute;
+  width: 100vw;
+  opacity: 0;
+  height: 35vh;
+  bottom: 0;
+  background-image: url(../../img/tt-orbit.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.social {
+  margin-top: 4vh;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-icon {
+  outline: none !important;
+  transition: all .3s ease-in-out;
+}
+
+.underline {
+  display: block;
+  position: relative;
+}
+
+.underline:before {
+  content: '';
+  width: 30%;
+  position: absolute;
+  margin-top: -5px;
+}
+
+.underline:after {
+  content: '';
+  width: 15%;
+  position: absolute;
+  margin-bottom: -5px;
+  bottom: 0;
+  left: 0;
+}
+
+.second-slide .slider-cont:after {
+  content: 'Mission';
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 0;
+}
+
+.social li {
+  opacity: 0;
+}
+
+.overflow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  background-repeat: no-repeat;
+  transition:all 0.5s ;
+  -webkit-transition:all 0.5s ;
+  -o-transition:all 0.5s ;
+  -moz-transition:all 0.5s ;
+  background-position: center center;
+  background-size: auto 100%;
+
+  @media (min-width: 1025px) {
+    &:hover {
+      background-size: auto 120%;
+    }
+  }
+}
+
+.card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 85vh;
+  margin: 0 auto;
+  padding-top: 0;
+  border: 10px solid transparent;
+  border-top: 0;
+  -o-border-image: url("../../img/tt-border.svg");
+  border-image: url("../../img/tt-border.svg");
+  border-image-slice: 30%;
+
+  @media(max-width: 992px) {
+    z-index: 39;
+  }
+
+  h2 {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.card-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+
+  @media (max-width: 992px) {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    max-width: 75%;
+    text-align: center;
+  }
+}
+
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  z-index: 400000000;
+}
+
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #06D6A0;
+}
+
+.arrowLeft {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  z-index: 1;
+}
+
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  z-index: 1;
+}
+
+.card1 {
+  background-image: url("../../img/leia.jpg");
+}
+
+.card2 {
+  background-image: url("../../img/luke-tlj.jpg");
+}
+
+.card3 {
+  background-image: url("../../img/iden.jpg");
+}
+
+.overflow-container {
+  &:before {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition:  opacity 0.2s ease-out;
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: 1025px) {
+    .card-bod,
+    .card-foot {
+      opacity: 0;
+    }
+
+    &:before {
+      opacity: 0;
+    }
+
+    &:hover {
+      &:before,
+      .card-bod,
+      .card-foot {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.new-card {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-head {
+  -webkit-transform: perspective(200px) rotateX(16deg);
+  transform: perspective(200px) rotateX(16deg);
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  width: 22px;
+  opacity: 0.5;
+  stroke-width: 4;
+}
+
+.arrow:hover polyline,
+.arrow:focus polyline {
+  stroke-width: 6;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
+
+
+.check {
+  display: flex;
+}

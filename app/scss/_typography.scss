@@ -1,0 +1,62 @@
+// Aurebesh Font
+@font-face {
+  font-family: 'Aurebesh';
+  src: url('../fonts/Aurebesh.eot');
+  src: url('../fonts/Aurebesh.eot') format('embedded-opentype'),
+  url('../fonts/Aurebesh.woff2') format('woff2'),
+  url('../fonts/Aurebesh.woff') format('woff'),
+  url('../fonts/Aurebesh.ttf') format('truetype'),
+  url('../fonts/Aurebesh.svg#Aurebesh') format('svg');
+}
+
+// Fluid Typography Styles
+$min-width: 320px;
+$max-width: 2000px;
+$min-font: 16px;
+$max-font: 24px;
+
+$h1: 2em;
+$h2: 1.5em;
+
+$baseline: 1.5rem;
+
+$header-font-family: 'Ubuntu', sans-serif;
+$body-font-family: 'News Cycle', sans-serif;
+$watermark-font-family: 'Aurebesh';
+
+html,
+body {
+  font-family: $body-font-family;
+  @include fluid-type($min-width, $max-width, $min-font, $max-font);
+}
+
+h1 {
+  @include fluid-type($min-width, $max-width, $min-font * 1.5, $max-font * 2.4);
+
+  margin-top: calc((#{$baseline} - #{$h1}) + #{$baseline} * 2);
+}
+
+h2 {
+  font-family: $header-font-family;
+  @include fluid-type($min-width, $max-width, $min-font * 1.5, $max-font * 1.9);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: calc((#{$baseline} - #{$h2}) + #{$baseline} * 2);
+}
+
+// Vertical Rhythm
+h1,
+h2 {
+  margin-bottom: $baseline;
+}
+
+//  TODO: change classes
+.second-slide .slider-cont:after {
+  font-family: $watermark-font-family;
+  font-size: 4em;
+  word-wrap: break-word;
+}
+
+.social-icon {
+  font-size: 2em;
+}
