@@ -301,7 +301,7 @@ body {
   border-top: 0;
   -o-border-image: url("../../img/tt-border.svg");
   border-image: url("../../img/tt-border.svg");
-  border-image-slice: 30%;
+  border-image-slice: 30%; 
 
   @media(max-width: 992px) {
     z-index: 39;
@@ -469,6 +469,3 @@ polyline {
 }
 
 
-.check {
-  display: flex;
-}
